@@ -1,0 +1,492 @@
+/* Importing Google font */
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,600;0,700;1,300;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling for navigation links */
+}
+
+:root {
+    /* Colors */
+    --white-color: #fff;
+    --dark-color: #252525;
+    --primary-color: #3b141c; /* Dark Maroon/Brown for coffee feel */
+    --secondary-color: #f3961c; /* Vibrant Orange/Gold for accent */
+    --light-pink-color: #faf4f5; /* Very light background color */
+    --medium-gray-color: #ccc;
+    --light-gray-color: #f5f5f5;
+
+    /* Font size */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 2.3rem;
+
+    /* Font weight */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Border radius */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /* Site max width */
+    --site-max-width: 1300px;
+}
+
+/* Stylings for whole site */
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.section-content {
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: var(--font-size-xl);
+    color: var(--dark-color);
+    margin-bottom: 50px;
+    font-weight: var(--font-weight-medium);
+}
+
+.centered-title {
+    text-align: center;
+}
+
+.centered-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+/* Buttons Styling */
+.buttons .button {
+    padding: 10px 26px;
+    border-radius: var(--border-radius-m);
+    font-weight: var(--font-weight-medium);
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.primary-button {
+    color: var(--white-color);
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.primary-button:hover {
+    background: transparent;
+    color: var(--secondary-color);
+}
+
+
+/* --- Nav styling --- */
+
+header {
+    background: var(--primary-color);
+    position: fixed;
+    width: 100%;
+    z-index: 10; /* Higher z-index for navbar */
+}
+
+header .navbar {
+    display: flex;
+    padding: 20px 0; /* Adjust padding here */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .nav-logo .logo-text {
+    color: var(--white-color);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+}
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+}
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    font-size: var(--font-size-n);
+    color: var(--white-color);
+    border-radius: var(--border-radius-m);
+    transition: 0.3s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+    color: var(--primary-color);
+    background: var(--secondary-color);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: var(--font-size-xl);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+/* --- Hero section --- */
+
+.hero-section {
+    min-height: 100vh;
+    background: var(--primary-color);
+}
+
+.hero-section .section-content {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--white-color);
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-section .hero-details {
+    flex: 1;
+}
+
+.hero-section .hero-details .title {
+    font-size: 3.5rem; /* Increased size for impact */
+    color: var(--secondary-color);
+    font-family: "Miniver", cursive;
+}
+
+.hero-section .hero-details .subtitle {
+    font-size: var(--font-size-xxl);
+    margin-top: 8px;
+    max-width: 90%;
+    font-weight: var(--font-weight-semibold);
+}
+
+.hero-section .hero-details .description {
+    font-size: var(--font-size-m);
+    margin: 24px 0 40px;
+    max-width: 90%;
+}
+
+
+.hero-section .hero-details .buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-section .hero-details .order-now {
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.hero-section .hero-details .order-now:hover {
+    background: transparent;
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+
+.hero-section .hero-details .contact-us {
+    color: var(--white-color);
+    border-color: var(--white-color);
+    background: transparent;
+}
+.hero-section .hero-details .contact-us:hover{
+    color: var(--primary-color);
+    border-color: var(--secondary-color);
+    background: var(--secondary-color);
+}
+
+.hero-section .hero-image-wrapper {
+    flex: 1;
+    max-width: 500px;
+    padding-top: 50px; /* Space for image */
+}
+
+/* --- About section --- */
+
+.about-section {
+    background: var(--light-pink-color);
+}
+
+.about-section .section-content {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-section .about-image-wrapper {
+    flex: 1;
+    max-width: 500px;
+    border-radius: var(--border-radius-s);
+    overflow: hidden;
+}
+
+.about-section .about-details {
+    flex: 1;
+}
+
+.about-section .about-details .description {
+    font-size: var(--font-size-n);
+    margin-bottom: 30px;
+}
+
+/* --- Menu section --- */
+
+.menu-section {
+    background: var(--white-color);
+}
+
+.menu-section .menu-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.menu-card {
+    background: var(--light-gray-color);
+    border-radius: var(--border-radius-s);
+    overflow: hidden;
+    padding-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.menu-card .menu-image {
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.menu-card .menu-category-title {
+    font-size: var(--font-size-xl);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.menu-card p {
+    padding: 0 15px;
+    color: var(--dark-color);
+    font-size: var(--font-size-s);
+}
+
+/* --- Testimonial section --- */
+
+.testimonial-section {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+.testimonial-section .section-title {
+    color: var(--secondary-color);
+}
+
+.testimonial-section .testimonial-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: var(--border-radius-s);
+    max-width: 500px;
+    text-align: center;
+}
+
+.testimonial-card .quote {
+    font-style: italic;
+    font-size: var(--font-size-m);
+    margin-bottom: 15px;
+}
+
+.testimonial-card .customer-name {
+    font-weight: var(--font-weight-semibold);
+    color: var(--secondary-color);
+}
+
+/* --- Gallery section --- */
+
+.gallery-section {
+    background: var(--light-pink-color);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--border-radius-s);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Contact section --- */
+
+.contact-section {
+    background: var(--white-color);
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: var(--font-size-m);
+    margin: 10px 0;
+    color: var(--dark-color);
+}
+
+.contact-info i {
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid var(--medium-gray-color);
+    border-radius: var(--border-radius-s);
+    font-size: var(--font-size-n);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form .button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* --- Footer --- */
+
+footer {
+    background: var(--dark-color);
+    color: var(--medium-gray-color);
+    padding: 20px 0;
+    text-align: center;
+    font-size: var(--font-size-s);
+}
+
+
+/* --- Responsive media query code for max width 900px --- */
+@media screen and (max-width: 900px) {
+    :root {
+        --font-size-xxl: 1.8rem;
+    }
+
+    .hero-section .section-content,
+    .about-section .section-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-section .hero-details .subtitle,
+    .hero-section .hero-details .description {
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .hero-section .hero-image-wrapper {
+        margin: 40px auto 0;
+    }
+    
+    .about-section .about-details {
+        margin-top: 30px;
+    }
+    
+    .about-section .about-details .section-title,
+    .about-section .about-details .section-subtitle {
+        text-align: center;
+    }
+    
+    .hero-section .hero-details .buttons {
+        justify-content: center;
+    }
+    
+    /* Nav Menu Responsive */
+    .navbar .nav-menu {
+        display: block;
+        background: var(--primary-color);
+        position: fixed;
+        left: 0;
+        top: 80px; /* Adjust based on header height */
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        transform: translateY(-200%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .nav-menu.active {
+        transform: translateY(0);
+    }
+
+    .navbar .nav-menu .nav-link {
+        color: var(--white-color);
+        font-size: var(--font-size-l);
+        display: block;
+        margin: 10px 0;
+        width: fit-content;
+    }
+    
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+    
+    .testimonial-section .testimonial-container {
+        flex-direction: column;
+    }
+
+}
